@@ -21,7 +21,7 @@ while [ $intentos -ge 0 ];do
         intentos=0
     else
         echo Usuario no encontrado
-        echo Por favor, intentalo de nuevo
+        echo "Por favor, intentalo de nuevo te quedan $intentos intentos"
     fi
 
 
