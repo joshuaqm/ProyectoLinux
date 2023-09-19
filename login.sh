@@ -1,37 +1,23 @@
 #!/bin/bash
 
-intentos=3
-while [ $intentos -ge 0 ];do
-    echo 'Ingresa el usuario o escribe "salir" para terminar el programa';
-    read -e user
+while true; do
+    echo "Ingresa el nombre del usuario o 'salir' para salir:"
+    read user
+
     if [ "$user" == "salir" ]; then
-        exit 1
-    if ! id "$user" &>/dev/null;then
-	echo "EL usuario no existe";
-	echo "Porfavor, intentalo de nuevo te quedan $intentos intentos";
-	return	  
-    fi
-   
-
-    	#echo 'Ingresa la contraseña';
-    	#read -e password
-    	#usuarioRegistrado=0
-   	# usuarioRegistrado=$(sudo grep -r $user /etc/shadow)
-
-    	#echo $usuarioRegistrado
-
-    	#if [ $usuarioRegistrado != 0 ]; then
-        #	echo Usuario encontrado
-        #	intentos=0
-    	#else
-        #	echo Usuario no encontrado
-        #	echo "Por favor, intentalo de nuevo te quedan $intentos intentos";
-    	#fi
+        echo "Gracias por usar la terminal PREBE:)"
+        break 
     fi
 
-    intentos=$((intentos-1))
+    echo "Ingresa la contraseña del usuario:"
+    read -s pass 
+
+    if su "$user" <<EOF
+$pass
+EOF
+    then
+        ./menu.sh
+    else
+        echo "Credenciales incorrectas."
+    fi
 done
-
-
-
-

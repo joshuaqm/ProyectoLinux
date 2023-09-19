@@ -1,3 +1,3 @@
 #!/bin/bash
 
-./pruebalogin.sh
+./login.sh
