@@ -18,9 +18,10 @@ while [ "$opcion" != "salir" ];do
         echo buscar:   Busca un archivo en la carpeta especificada por el usuario
         echo creditos: Muestra los creditos de los programadores
         echo juego:    Inicia un juego en la terminal
-        #echo musica:   Reproduce musica en la terminal
+        echo musica:   Reproduce musica en la terminal
         echo salir:    Redirige al usuario al sistema de login
     fi
+
     if [ "$opcion" == "infosys" ];then
         echo "La informacion del sistema es:"
         ./infosys.sh
@@ -35,11 +36,6 @@ while [ "$opcion" != "salir" ];do
         ./buscar.sh
     fi
     
-    if [ "$opcion" == "salir" ];then
-        echo -e "Redirigiendo al sistema de inicio de sesion...\n"
-        exit 1
-    fi
-
     if [ "$opcion" == "creditos" ];then
         ./creditos.sh
     fi
@@ -48,4 +44,7 @@ while [ "$opcion" != "salir" ];do
         ./juego.sh
     fi
 
+    if [ "$opcion" == "musica" ];then
+        ./musica.sh
+    fi
 done
