@@ -7,7 +7,7 @@
 
 ## Objetivo  :shipit:
 
-Nosotros como becarios demuestraremos los conocimientos adquiridos durante el curso de Linux, así mismo,pondremos a prueba nuestra capacidad de investigación, creatividad y análisis para poder cumplir con las especificaciones del proyecto. 
+Nosotros como becarios demostraremos los conocimientos adquiridos durante el curso de Linux, así mismo,pondremos a prueba nuestra capacidad de investigación, creatividad y análisis para poder cumplir con las especificaciones del proyecto. 
 <p align="center">
 <img src="https://media.giphy.com/media/z6z7V16QWDVI9tad3O/giphy.gif" height=200px, width=400px/> 
  </p>
@@ -33,7 +33,7 @@ Nosotros como becarios demuestraremos los conocimientos adquiridos durante el cu
 
 4. **buscar-archivo**: Busca un archivo en una carpeta específica proporcionada como parámetro.
 
-5. **creditos**: Muestra los créditos del programador con un formato atractivo.
+5. **créditos**: Muestra los créditos del programador con un formato atractivo.
 
 6. **juegos**: Permite jugar a juegos como el ahorcado y el gato directamente desde la línea de comandos.
 
