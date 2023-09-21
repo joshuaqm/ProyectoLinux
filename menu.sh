@@ -13,13 +13,17 @@ while [ "$opcion" != "salir" ];do
 
     if [ "$opcion" == "ayuda" ];then
         echo ayuda:    Muestra la lista de comandos disponibles en la terminal PREBE
-        #echo infosis:  Muestra la informacion del sistema
+        echo infosys:  Muestra la informacion del sistema
         echo fyh:      Muestra la fecha y hora actual
         #echo buscar:   Busca un archivo y una carpeta deseados por el usuario
         echo creditos: Muestra los creditos de los programadores
         echo juego:    Inicia un juego en la terminal
         #echo musica:   Reproduce musica en la terminal
         echo salir:    Redirige al usuario al sistema de login
+    fi
+    if [ "$opcion" == "infosis" ];then
+        echo "La informacion del sistema es:"
+        ./infosys.sh
     fi
     if [ "$opcion" == "fyh" ];then
         echo "La fecha y hora actual es:"

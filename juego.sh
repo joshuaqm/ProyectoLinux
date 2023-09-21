@@ -15,6 +15,40 @@ mostrar_juego() {
     echo "Intentos restantes: $intentos"
 }
 
+# Funcion que dibuja al ahorcado
+dibujar_ahorcado() {
+    case $1 in
+        5)
+            echo -e "  O"
+            ;;
+        4)
+            echo -e "  O"
+            echo -e "  I"
+            ;;
+        3)
+            echo -e "  O"
+            echo -e "--I"
+            ;;
+        2)
+            echo -e "  O"
+            echo -e "--I--"
+            ;;
+        1)
+            echo -e "  O"
+            echo -e "--I--"
+            echo -e " i"
+            ;;
+        0)
+            echo -e "  O"
+            echo -e "--I--"
+            echo -e " i i"
+            ;;
+        *)
+            echo "Número de intentos no válido: $1"
+            ;;
+    esac
+}
+
 for ((i=0; i<${#palabra_secreta}; i++)); do
     palabra_adivinada+="_"
 done
@@ -25,65 +59,19 @@ while [ $intentos -gt 0 ]; do
 
     read -p "Ingresa una letra: " letra
     echo -e "\n"
-    # Verifica si la letra está en la palabra secreta
+
     if [[ $palabra_secreta == *"$letra"* ]]; then
         for ((i=0; i<${#palabra_secreta}; i++)); do
             if [ "${palabra_secreta:i:1}" == "$letra" ]; then
                 palabra_adivinada="${palabra_adivinada:0:$i}$letra${palabra_adivinada:$i+1}"
             fi
         done
-        if [ $intentos -eq 5 ];then
-            echo -e "  O"
-        fi
-        if [ $intentos -eq 4 ];then
-            echo -e "  O"
-            echo -e "  I"
-        fi
-        if [ $intentos -eq 3 ];then
-            echo -e "  O"
-            echo -e "--I"
-        fi
-        if [ $intentos -eq 2 ];then
-            echo -e "  O"
-            echo -e "--I--"
-        fi
-        if [ $intentos -eq 1 ];then
-            echo -e "  O"
-            echo -e "--I--"
-            echo -e " i"
-        fi
-        if [ $intentos -eq 0 ];then
-            echo -e "  O"
-            echo -e "--I--"
-            echo -e " i i"
-        fi
+        
+        dibujar_ahorcado $intentos
+        
     else
-        intentos=$((intentos - 1))
-        if [ $intentos -eq 5 ];then
-            echo -e "  O"
-        fi
-        if [ $intentos -eq 4 ];then
-            echo -e "  O"
-            echo -e "  I"
-        fi
-        if [ $intentos -eq 3 ];then
-            echo -e "  O"
-            echo -e "--I"
-        fi
-        if [ $intentos -eq 2 ];then
-            echo -e "  O"
-            echo -e "--I--"
-        fi
-        if [ $intentos -eq 1 ];then
-            echo -e "  O"
-            echo -e "--I--"
-            echo -e " i"
-        fi
-        if [ $intentos -eq 0 ];then
-            echo -e "  O"
-            echo -e "--I--"
-            echo -e " i i"
-        fi
+        intentos=$((intentos-1))
+        dibujar_ahorcado $intentos
     fi
 
     if [ "$palabra_adivinada" == "$palabra_secreta" ]; then
