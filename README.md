@@ -8,16 +8,20 @@
 ## Objetivo  :shipit:
 
 Nosotros como becarios demuestraremos los conocimientos adquiridos durante el curso de Linux, así mismo,pondremos a prueba nuestra capacidad de investigación, creatividad y análisis para poder cumplir con las especificaciones del proyecto. 
+<p align="center">
+<img src="https://media.giphy.com/media/z6z7V16QWDVI9tad3O/giphy.gif" height=200px, width=400px/> 
+ </p>
+<p align="center">
 
 ## Características Principales
 
-- **Login:** Los usuarios deben ingresar un nombre de usuario y contraseña válidos para acceder al sistema.
+- **Login:** Los usuarios deben ingresar un nombre de usuario y contraseña válidos para acceder al sistema. 👨‍💻
 
-- **Interfaz de Línea de Comandos Personalizada:** La terminal muestra información importante, como el nombre de usuario activo y la ubicación actual (carpeta).
+- **Interfaz de Línea de Comandos Personalizada:** La terminal muestra información importante, como el nombre de usuario activo y la ubicación actual (carpeta). 💻
 
-- **Amplia Variedad de Comandos:** El sistema admite una variedad de comandos, incluyendo los proporcionados por el sistema operativo anfitrión y comandos personalizados, como juegos y herramientas de información.
+- **Amplia Variedad de Comandos:** El sistema admite una variedad de comandos, incluyendo los proporcionados por el sistema operativo anfitrión y comandos personalizados, como juegos y herramientas de información.🖱️
 
-- **Salida Segura:** El programa solo permite salir utilizando el comando "salir", evitando la terminación no deseada.
+- **Salida Segura:** El programa solo permite salir utilizando el comando "salir", evitando la terminación no deseada.❗
 
 ## Comandos Disponibles
 
