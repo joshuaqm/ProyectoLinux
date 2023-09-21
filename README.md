@@ -11,7 +11,7 @@ Nosotros como becarios demuestraremos los conocimientos adquiridos durante el cu
 
 ## Características Principales
 
-- **Inicio de Sesión Seguro:** Los usuarios deben ingresar un nombre de usuario y contraseña válidos para acceder al sistema.
+- **Login:** Los usuarios deben ingresar un nombre de usuario y contraseña válidos para acceder al sistema.
 
 - **Interfaz de Línea de Comandos Personalizada:** La terminal muestra información importante, como el nombre de usuario activo y la ubicación actual (carpeta).
 
@@ -32,18 +32,6 @@ Nosotros como becarios demuestraremos los conocimientos adquiridos durante el cu
 5. **creditos**: Muestra los créditos del programador con un formato atractivo.
 
 6. **juegos**: Permite jugar a juegos como el ahorcado y el gato directamente desde la línea de comandos.
-
-## Uso
-
-Para ejecutar el sistema, sigue estos pasos:
-
-1. Clona este repositorio en tu máquina local.
-
-2. Abre una terminal en la carpeta del proyecto.
-
-3. Ejecuta el programa utilizando el comando `python sistema_acceso.py` (reemplaza `sistema_acceso.py` con el nombre de tu archivo principal si es diferente).
-
-4. Sigue las instrucciones en la pantalla para iniciar sesión y utilizar los comandos disponibles.
 
 ## Contribución
 
