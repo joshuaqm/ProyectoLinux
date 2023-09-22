@@ -6,9 +6,6 @@ ctrl_c_handler() {
 
 # Asociar la función al manejo de la señal SIGINT
 trap ctrl_c_handler SIGINT
-
-stty susp ""
-
 echo -e "\n \nValida"
 echo "Bienvenido $USER"
 echo "La carpeta actual es:"

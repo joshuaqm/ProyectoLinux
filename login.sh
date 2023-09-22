@@ -1,4 +1,13 @@
 #!/bin/bash
+# Función para manejar la señal SIGINT (Ctrl+C)
+ctrl_c_handler() {
+    echo "Ctrl+C desactivado"
+}
+
+# Asociar la función al manejo de la señal SIGINT
+trap ctrl_c_handler SIGINT
+
+stty susp ""
 
 while true; do
     echo "Ingresa el nombre del usuario o 'salir' para salir:"

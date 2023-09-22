@@ -1,4 +1,11 @@
 #!/bin/bash
+# Función para manejar la señal SIGINT (Ctrl+C)
+ctrl_c_handler() {
+    echo "Ctrl+C desactivado"
+}
+
+# Asociar la función al manejo de la señal SIGINT
+trap ctrl_c_handler SIGINT
 
 #/dev/null hace que no se imprima la ruta, 2>&1 descarta mensaje de error
 if which mpg123 > /dev/null 2>&1;then
