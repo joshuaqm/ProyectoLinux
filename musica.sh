@@ -25,6 +25,7 @@ while [ "$opcion" != "salir" ];do
         echo ayuda:        Muestra la lista de comandos disponibles en el reproductor Espotifai
         echo reproducir:   Reproduce la cancion especificada
         echo todo:         Reproduce todas las canciones de la carpeta especificada
+        echo salir:        Regresa al menu principal
     fi
 
     if [ "$opcion" == "reproducir" ];then

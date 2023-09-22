@@ -1,4 +1,13 @@
 #!/bin/bash
+# Función para manejar la señal SIGINT (Ctrl+C)
+ctrl_c_handler() {
+    echo "Ctrl+C desactivado"
+}
+
+# Asociar la función al manejo de la señal SIGINT
+trap ctrl_c_handler SIGINT
+
+stty susp ""
 
 echo -e "\n \nValida"
 echo "Bienvenido $USER"
@@ -46,5 +55,8 @@ while [ "$opcion" != "salir" ];do
 
     if [ "$opcion" == "musica" ];then
         ./musica.sh
+    else
+        eval $opcion 2>/dev/null
     fi
+
 done
