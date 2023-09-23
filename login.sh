@@ -7,6 +7,7 @@ ctrl_c_handler() {
 # Asociar la función al manejo de la señal SIGINT
 trap ctrl_c_handler SIGINT
 
+#Funcion que bloquea ctrl+z
 stty susp ""
 
 while true; do
