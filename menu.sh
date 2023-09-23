@@ -7,14 +7,13 @@ ctrl_c_handler() {
 # Asociar la función al manejo de la señal SIGINT
 trap ctrl_c_handler SIGINT
 echo -e "\n \nValida"
-echo "Bienvenido $USER"
-echo "La carpeta actual es:"
-pwd
+echo -e "Bienvenid@ \e[33m"$USER"\e[0m"
 
 opcion=""
 
 while [ "$opcion" != "salir" ];do
-    echo -e -n "\n\nBienvenido al menu de opciones, escribe "ayuda" para ver las opciones disponibles\n>"
+    echo -e "\n\e[32mBienvenido al menu de opciones, escribe "ayuda" para ver las opciones disponibles\e[0m"
+    echo -e -n "\e[33m"$USER"\e[0m:\e[36m"$PWD"\e[0m> "
     read opcion
 
     if [ "$opcion" == "ayuda" ];then
